@@ -21,6 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# NOTE: This is a development/exercise project. In production, use environment variables!
 SECRET_KEY = 'django-insecure-r0f^=$cakceoas2v+62$0a+qx5$5e!x)goyfhmu4986#!bdz-i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -129,7 +130,8 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# CORS settings
+# CORS settings - Development only! Restrict in production
+# For this exercise, we allow all origins for easy testing in Codespaces
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_METHODS = ['*']
 CORS_ALLOW_HEADERS = ['*']
